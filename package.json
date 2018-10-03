@@ -1,0 +1,30 @@
+{
+  "name": "stixpattern",
+  "version": "1.0.0",
+  "description": "Lexer and parser for STIX 2.0 Patterning Language.",
+  "main": "index.js",
+  "dependencies": {
+    "antlr4": "^4.7.1",
+    "webpack-cli": "^3.1.2",
+    "webpack": "^4.20.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TerrorBite/stixpattern.git"
+  },
+  "keywords": [
+    "stix",
+    "parser"
+  ],
+  "author": "TerrorBite",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/TerrorBite/stixpattern/issues"
+  },
+  "homepage": "https://github.com/TerrorBite/stixpattern#readme"
+}
