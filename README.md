@@ -1,4 +1,8 @@
 # stixpattern
 Parser and lexer for STIX 2.0 Patterning Language.
 
-At the moment this doesn't actually output a parse tree, just a set of error strings if any parse errors occurred.
+This is based upon Python code in the OASIS TC Open Repository
+
+https://github.com/oasis-open/cti-pattern-validator
+
+It is not perfectly identical but it follows the same logic paths.

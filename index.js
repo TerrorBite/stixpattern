@@ -4,6 +4,8 @@ var STIXPatternLexer = require( "./STIXPatternLexer" ).STIXPatternLexer;
 var STIXPatternParser = require( "./STIXPatternParser" ).STIXPatternParser;
 var antlr4 = require("antlr4");
 
+var Pattern = require("./Pattern").Pattern;
+
 /**
  * Modifies ErrorListener to collect error message and set flag
  * to False when an invalid pattern is encountered.
@@ -20,7 +22,7 @@ class STIXPatternErrorListener extends antlr4.error.ErrorListener {
 
 }
 
-function parsePattern( pattern ) {
+function run_validator( pattern ) {
 	let start = pattern.slice(0, 2);
 
 	var parseErrorListener = new STIXPatternErrorListener();
@@ -59,8 +61,12 @@ function parsePattern( pattern ) {
 }
 
 function validate( pattern ) {
-	return parsePattern( pattern ).length == 0;
+	return run_validator( pattern ).length == 0;
 }
 
-exports.parsePattern = parsePattern;
+
+
+
+exports.run_validator = run_validator;
 exports.validate = validate;
+exports.Pattern = Pattern;
